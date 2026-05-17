@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Welding LLC | Mobile Welding & Fabrication</title>
+  <meta name="description" content="K-Welding LLC provides mobile welding, fabrication, fence repair, gate repair, cattle guards, custom entryways, and automated gate opener installs across Central Texas." />
+
+  <style>
+    :root {
+      --turquoise: #00c8c8;
+      --dark: #0b0f14;
+      --panel: #111820;
+      --text: #f5f7fa;
+      --muted: #b8c0cc;
+      --border: #263340;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        radial-gradient(circle at top, #12333a, #0b0f14);
+      border-bottom: 3px solid var(--turquoise);
+    }
+
+    header h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      color: var(--turquoise);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: clamp(20px, 4vw, 34px);
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid var(--turquoise);
+    }
+
+    .btn.primary {
+      background: var(--turquoise);
+      color: #001010;
+    }
+
+    .btn.secondary {
+      color: var(--turquoise);
+      background: transparent;
+    }
+
+    section {
+      padding: 55px 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 34px;
+      color: var(--turquoise);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .card h4 {
+      color: var(--turquoise);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .service-area {
+      columns: 2;
+      max-width: 850px;
+      margin: 25px auto 0;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0e2028, #101820);
+      border: 2px solid var(--turquoise);
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+      max-width: 800px;
+      margin: 30px auto 0;
+    }
+
+    .contact-box a {
+      color: var(--turquoise);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: #070a0d;
+    }
+
+    .highlight {
+      color: var(--turquoise);
+      font-weight: bold;
+    }
+
+    @media (max-width: 650px) {
+      .service-area {
+        columns: 1;
+      }
+
+      header {
+        padding: 60px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>K~Welding LLC</h1>
+    <h2>Mobile Welding • Fabrication • Repairs</h2>
+    <p>
+      Reliable mobile welding and fabrication service for ranches, farms, homes, businesses,
+      gates, fences, cattle guards, equipment, trailers, and custom steel projects across Central Texas.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="tel:19792214089">Call Now: (979) 221-4089</a>
+      <a class="btn secondary" href="mailto:kolten@k-welding-llc.com">Request a Quote</a>
+    </div>
+  </header>
+
+  <section>
+    <h3>Built for Ranch, Farm & Field Work</h3>
+    <p class="intro">
+      K~Welding LLC provides mobile welding, fabrication, and repair work where you need it.
+      From gate repairs and pipe fence to custom entrances and automated gate openers, we bring the rig to the job.
+    </p>
+  </section>
+
+  <section>
+    <h3>Services</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Fence & Gate Repair</h4>
+        <p>Pipe fence, ranch fence, gate hinges, broken posts, braces, latches, and field repairs.</p>
+      </div>
+
+      <div class="card">
+        <h4>Custom Gates</h4>
+        <p>Custom ranch gates, entry gates, driveway gates, decorative steel gates, and heavy-duty builds.</p>
+      </div>
+
+      <div class="card">
+        <h4>Cattle Guards</h4>
+        <p>Installation, repair, fabrication, replacement, and entrance tie-ins for ranch and property access.</p>
+      </div>
+
+      <div class="card">
+        <h4>Custom Entryways</h4>
+        <p>Steel entryways, ranch entrances, columns, gate frames, pipe work, and full entrance builds.</p>
+      </div>
+
+      <div class="card">
+        <h4>Automated Gate Openers</h4>
+        <p>Gate opener installs, troubleshooting, solar setups, keypads, remotes, exit sensors, and repairs.</p>
+      </div>
+
+      <div class="card">
+        <h4>Equipment & Trailer Repair</h4>
+        <p>Farm equipment, trailers, brackets, cracks, ramps, couplers, hinges, and general mobile repair work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Why Choose K~Welding LLC?</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Mobile Service</h4>
+        <p>We come to your property, ranch, shop, jobsite, or field so you do not have to haul the work in.</p>
+      </div>
+
+      <div class="card">
+        <h4>Built Heavy</h4>
+        <p>Work is done with strength, function, and real-world use in mind — not just looks.</p>
+      </div>
+
+      <div class="card">
+        <h4>Ranch & Property Focused</h4>
+        <p>We understand gates, fence, cattle guards, equipment, and the kind of repairs that keep things moving.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Service Area</h3>
+    <p class="intro">
+      Serving <span class="highlight">Central Texas</span> and surrounding counties.
+    </p>
+
+    <ul class="service-area">
+      <li>Burleson County</li>
+      <li>Brazos County</li>
+      <li>Washington County</li>
+      <li>Lee County</li>
+      <li>Robertson County</li>
+      <li>Milam County</li>
+      <li>Austin County</li>
+      <li>Grimes County</li>
+      <li>Waller County</li>
+      <li>Fayette County</li>
+      <li>Madison County</li>
+      <li>Walker County</li>
+      <li>Williamson County</li>
+      <li>Bastrop County</li>
+      <li>Colorado County</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Get a Quote</h3>
+
+    <div class="contact-box">
+      <p>Need mobile welding, gate repair, fence work, cattle guard work, or a custom steel project?</p>
+      <br />
+      <p><a href="tel:19792214089">(979) 221-4089</a></p>
+      <p><a href="mailto:kolten@k-welding-llc.com">kolten@k-welding-llc.com</a></p>
+      <br />
+      <p class="highlight">K~Welding LLC — Fabrication & Repairs</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 K~Welding LLC. All rights reserved.</p>
+    <p>Mobile Welding • Fabrication • Fence • Gates • Cattle Guards • Automated Gate Openers</p>
+  </footer>
+
+</body>
+</html>

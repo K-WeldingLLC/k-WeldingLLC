@@ -1,310 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K-Welding LLC | Mobile Welding & Fabrication</title>
-  <meta name="description" content="K-Welding LLC provides mobile welding, fabrication, fence repair, gate repair, cattle guards, custom entryways, and automated gate opener installs across Central Texas." />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>K~Welding LLC | Gate Automation, Mobile Welding &amp; Fabrication Central Texas</title>
+  <meta name="description" content="K~Welding LLC specializes in automated gate opener installs and repairs, plus mobile welding, fence building, cattle guards, custom entryways, trailer repair, and equipment repair across Central Texas." />
+  <meta name="keywords" content="automated gate opener Central Texas, gate automation install repair, K~Welding LLC, mobile welding, fence welding, gate repair, cattle guards, trailer repair, equipment repair, Caldwell TX welder" />
+  <meta name="author" content="K~Welding LLC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://k-welding-llc.com/" />
+  <meta property="og:title" content="K~Welding LLC | Gate Automation &amp; Mobile Welding" />
+  <meta property="og:description" content="Automated gate opener installs and repairs, mobile welding, custom gates, fence building, cattle guards, and equipment repair across Central Texas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://k-welding-llc.com/" />
+  <meta property="og:site_name" content="K~Welding LLC" />
+  <meta property="og:image" content="https://k-welding-llc.com/images/logo.png" />
+  <meta name="theme-color" content="#00d5d5" />
   <style>
-    :root {
-      --turquoise: #00c8c8;
-      --dark: #0b0f14;
-      --panel: #111820;
-      --text: #f5f7fa;
-      --muted: #b8c0cc;
-      --border: #263340;
-    }
+    :root{--bg:#070b10;--panel:#101820;--panel2:#0b1218;--text:#f3f7f7;--muted:#b7c4c7;--line:#26343d;--brand:#00d5d5;--brand2:#79ffff;--warn:#ffcc66;--shadow:0 20px 60px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top left,#14323a 0,#070b10 38%,#05070a 100%);color:var(--text);line-height:1.5;scroll-behavior:smooth;}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92vw);margin:auto}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    header{position:sticky;top:0;z-index:100;background:rgba(5,8,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em;font-size:1.3rem;color:var(--brand)}
+    .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .brand-text small{display:block;color:var(--muted);font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase}
+    .links{display:flex;gap:18px;align-items:center}
+    .links a{color:var(--muted);font-weight:700}
+    .links a:hover{color:var(--brand2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#001114!important;font-weight:900;border-radius:999px;padding:12px 20px;box-shadow:0 8px 24px rgba(0,213,213,.22);transition:transform .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.secondary{background:transparent;color:var(--brand2)!important;border:2px solid var(--brand)}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.6;
-    }
+    .hero{padding:60px 0 40px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .badge{display:inline-block;border:1px solid rgba(0,213,213,.45);color:var(--brand2);border-radius:999px;padding:7px 14px;font-weight:800;background:rgba(0,213,213,.08);margin-bottom:6px}
+    h1{font-size:clamp(2.1rem,5.5vw,4.8rem);line-height:.95;margin:14px 0 14px;letter-spacing:-.05em}
+    h1 span{color:var(--brand)}
+    .lead{font-size:1.15rem;color:var(--muted);max-width:660px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .card{background:linear-gradient(180deg,rgba(16,24,32,.96),rgba(8,14,20,.96));border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+    .quick h3{margin:0 0 10px;color:var(--brand2)}
+    .quick p{margin:8px 0;color:var(--muted)}
+    .phone{font-size:1.75rem;font-weight:900;color:var(--brand)}
 
-    header {
-      padding: 80px 20px;
-      text-align: center;
-      background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-        radial-gradient(circle at top, #12333a, #0b0f14);
-      border-bottom: 3px solid var(--turquoise);
-    }
+    .gate-feature{background:linear-gradient(135deg,rgba(0,80,90,.25) 0%,rgba(7,11,16,.9) 60%);border:1px solid rgba(0,213,213,.3);border-radius:24px;padding:40px}
+    .gate-feature h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px;color:var(--brand2)}
+    .gate-feature .sub{color:var(--muted);font-size:1.1rem;margin:0 0 28px}
+    .gate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:28px}
+    .gate-card{background:rgba(0,213,213,.07);border:1px solid rgba(0,213,213,.2);border-radius:16px;padding:20px}
+    .gate-card h4{margin:0 0 8px;color:var(--brand);font-size:1.05rem}
+    .gate-card p{margin:0;color:var(--muted);font-size:.95rem}
+    .gate-brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .brand-pill{background:rgba(0,213,213,.1);border:1px solid rgba(0,213,213,.25);border-radius:999px;padding:5px 14px;font-size:.85rem;color:var(--brand2);font-weight:700}
 
-    header h1 {
-      font-size: clamp(42px, 8vw, 78px);
-      color: var(--turquoise);
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
+    section{padding:50px 0}
+    .section-title{font-size:2.5rem;margin:0 0 8px;color:var(--brand2)}
+    .section-sub{color:var(--muted);margin:0 0 30px;font-size:1.1rem}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .service{padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(16,24,32,.75);transition:background .3s}
+    .service:hover{background:rgba(20,30,40,.9)}
+    .service h3{margin:0 0 8px;color:var(--brand2)}
+    .service p{margin:0;color:var(--muted)}
+    .service.featured{border-color:rgba(0,213,213,.4);background:rgba(0,50,60,.35)}
+    .service.featured h3{font-size:1.2rem}
+    .service-badge{display:inline-block;background:var(--brand);color:#001114;font-size:.7rem;font-weight:900;border-radius:999px;padding:3px 10px;margin-bottom:8px;letter-spacing:.05em;text-transform:uppercase}
 
-    header h2 {
-      font-size: clamp(20px, 4vw, 34px);
-      margin-bottom: 20px;
-    }
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;margin-top:20px}
+    .gallery-item{aspect-ratio:1/1;overflow:hidden;border-radius:12px;border:1px solid var(--line);cursor:pointer;position:relative}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .gallery-item:hover img{transform:scale(1.08)}
 
-    header p {
-      max-width: 850px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-      font-size: 18px;
-    }
+    .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);align-items:center;justify-content:center}
+    .lightbox.active{display:flex}
+    .lightbox img{max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 60px rgba(0,213,213,.25)}
+    .lb-close{position:fixed;top:18px;right:26px;font-size:2.6rem;color:#fff;cursor:pointer;line-height:1;opacity:.8}
+    .lb-close:hover{opacity:1;color:var(--brand)}
+    .lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);font-size:2.5rem;color:#fff;cursor:pointer;opacity:.7;padding:10px 18px;background:rgba(0,0,0,.45);border-radius:8px;user-select:none}
+    .lb-prev:hover,.lb-next:hover{opacity:1;color:var(--brand)}
+    .lb-prev{left:10px} .lb-next{right:10px}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+    .counties{display:flex;flex-wrap:wrap;gap:9px}
+    .pill{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 12px;color:#d8e6e8;font-weight:700}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .list{margin:0;padding-left:20px;color:var(--muted)}
+    .list li{margin:8px 0}
+    .notice{border-left:5px solid var(--brand);background:rgba(0,213,213,.08);padding:16px 18px;border-radius:14px;color:#dff;margin-top:20px}
+    footer{margin-top:40px;border-top:1px solid var(--line);padding:40px 0;color:var(--muted);text-align:center;background:#05070a}
+    .footer-logo{width:70px;height:70px;border-radius:50%;margin:0 auto 14px;display:block}
+    .footer-brand{color:var(--brand);font-weight:900;font-size:1.4rem;margin-bottom:6px}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid var(--turquoise);
-    }
-
-    .btn.primary {
-      background: var(--turquoise);
-      color: #001010;
-    }
-
-    .btn.secondary {
-      color: var(--turquoise);
-      background: transparent;
-    }
-
-    section {
-      padding: 55px 20px;
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    h3 {
-      font-size: 34px;
-      color: var(--turquoise);
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .card h4 {
-      color: var(--turquoise);
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .card p, .card li {
-      color: var(--muted);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .service-area {
-      columns: 2;
-      max-width: 850px;
-      margin: 25px auto 0;
-      color: var(--muted);
-    }
-
-    .contact-box {
-      background: linear-gradient(135deg, #0e2028, #101820);
-      border: 2px solid var(--turquoise);
-      border-radius: 14px;
-      padding: 30px;
-      text-align: center;
-      max-width: 800px;
-      margin: 30px auto 0;
-    }
-
-    .contact-box a {
-      color: var(--turquoise);
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      background: #070a0d;
-    }
-
-    .highlight {
-      color: var(--turquoise);
-      font-weight: bold;
-    }
-
-    @media (max-width: 650px) {
-      .service-area {
-        columns: 1;
-      }
-
-      header {
-        padding: 60px 18px;
-      }
+    @media(max-width:820px){
+      .grid,.split{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .links{display:none}
+      .hero{padding-top:36px}
+      .phone{font-size:1.45rem}
+      .section-title{font-size:2rem}
+      .gate-feature{padding:24px}
     }
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"K~Welding LLC","description":"Gate automation installs and repairs, mobile welding, fence building, gate repair, cattle guards, custom entryways, trailer repair, and equipment repair serving Central Texas.","telephone":"+19792214089","email":"kolten@k-welding-llc.com","url":"https://k-welding-llc.com/","logo":"https://k-welding-llc.com/images/logo.png","areaServed":["Burleson County, TX","Brazos County, TX","Washington County, TX","Lee County, TX","Robertson County, TX","Milam County, TX","Austin County, TX","Grimes County, TX","Waller County, TX","Fayette County, TX","Madison County, TX","Walker County, TX","Williamson County, TX","Bastrop County, TX","Colorado County, TX"],"serviceType":["Automated Gate Opener Installation","Gate Automation Repair","Mobile Welding","Fence Building","Gate Repair","Custom Gates","Cattle Guards","Trailer Repair","Equipment Repair","Handrails","Fabrication"]}
+  </script>
 </head>
-
 <body>
 
   <header>
-    <h1>K~Welding LLC</h1>
-    <h2>Mobile Welding • Fabrication • Repairs</h2>
-    <p>
-      Reliable mobile welding and fabrication service for ranches, farms, homes, businesses,
-      gates, fences, cattle guards, equipment, trailers, and custom steel projects across Central Texas.
-    </p>
-
-    <div class="buttons">
-      <a class="btn primary" href="tel:19792214089">Call Now: (979) 221-4089</a>
-      <a class="btn secondary" href="mailto:kolten@k-welding-llc.com">Request a Quote</a>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <img src="images/logo.png" alt="K~Welding LLC Logo">
+        <span class="brand-text">K~Welding LLC <small>Fabrication &bull; Repairs &bull; Gate Automations</small></span>
+      </a>
+      <nav class="links">
+        <a href="#gate-automation">Gate Automation</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="tel:+19792214089">Call Now</a>
     </div>
   </header>
 
-  <section>
-    <h3>Built for Ranch, Farm & Field Work</h3>
-    <p class="intro">
-      K~Welding LLC provides mobile welding, fabrication, and repair work where you need it.
-      From gate repairs and pipe fence to custom entrances and automated gate openers, we bring the rig to the job.
-    </p>
-  </section>
+  <main>
 
-  <section>
-    <h3>Services</h3>
-
-    <div class="grid">
-      <div class="card">
-        <h4>Fence & Gate Repair</h4>
-        <p>Pipe fence, ranch fence, gate hinges, broken posts, braces, latches, and field repairs.</p>
+    <section class="hero wrap">
+      <div class="grid">
+        <div>
+          <span class="badge">Serving Central Texas</span>
+          <h1>Gate automation <span>installed &amp; repaired right.</span></h1>
+          <p class="lead">K~Welding LLC specializes in automated gate opener installs, diagnostics, and repairs &mdash; plus mobile welding, custom gates, fences, cattle guards, trailers, and equipment across Central Texas.</p>
+          <div class="cta">
+            <a class="btn" href="tel:+19792214089">Call/Text (979) 221-4089</a>
+            <a class="btn secondary" href="mailto:kolten@k-welding-llc.com">Email Estimate</a>
+          </div>
+        </div>
+        <div class="card quick">
+          <h3>Fast mobile service</h3>
+          <p>On-site gate automation, welding, and fabrication for farms, ranches, homes, shops, trailers, and equipment.</p>
+          <p class="phone">(979) 221-4089</p>
+          <p><strong>Email:</strong> kolten@k-welding-llc.com</p>
+          <p><strong>Website:</strong> k-welding-llc.com</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Custom Gates</h4>
-        <p>Custom ranch gates, entry gates, driveway gates, decorative steel gates, and heavy-duty builds.</p>
+    <section id="gate-automation" class="wrap">
+      <div class="gate-feature">
+        <h2>Automated Gate Openers</h2>
+        <p class="sub">New installs, troubleshooting, diagnostics, and full repairs &mdash; swing gates, slide gates, and everything in between.</p>
+        <div class="gate-grid">
+          <div class="gate-card">
+            <h4>New Installs</h4>
+            <p>Full installation of automatic swing and slide gate opener systems. We handle wiring, mounting, programming, and testing so your gate works right from day one.</p>
+          </div>
+          <div class="gate-card">
+            <h4>Repairs &amp; Diagnostics</h4>
+            <p>Gate not opening? Running slow? Stopping mid-cycle? We diagnose and repair openers, control boards, limit switches, safety sensors, and wiring faults.</p>
+          </div>
+          <div class="gate-card">
+            <h4>Remote &amp; Keypad Programming</h4>
+            <p>Program new remotes, keypads, and vehicle loop detectors. We set up access codes and sync all entry devices to your opener system.</p>
+          </div>
+          <div class="gate-card">
+            <h4>Solar &amp; Battery Systems</h4>
+            <p>Install and service solar panels and battery backup systems to keep your gate running even during power outages.</p>
+          </div>
+        </div>
+        <div>
+          <p style="color:var(--muted);margin:0 0 10px;font-weight:700;">Brands we work on:</p>
+          <div class="gate-brands">
+            <span class="brand-pill">LiftMaster</span>
+            <span class="brand-pill">FAAC</span>
+            <span class="brand-pill">Viking Access</span>
+            <span class="brand-pill">US Automatic</span>
+            <span class="brand-pill">Ghost Controls</span>
+            <span class="brand-pill">Mighty Mule</span>
+            <span class="brand-pill">Eagle Access</span>
+            <span class="brand-pill">Linear</span>
+            <span class="brand-pill">Apollo</span>
+            <span class="brand-pill">&amp; more</span>
+          </div>
+        </div>
+        <div class="cta" style="margin-top:28px">
+          <a class="btn" href="tel:+19792214089">Call About Gate Automation</a>
+          <a class="btn secondary" href="mailto:kolten@k-welding-llc.com?subject=Gate%20Automation%20Estimate">Email for Estimate</a>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Cattle Guards</h4>
-        <p>Installation, repair, fabrication, replacement, and entrance tie-ins for ranch and property access.</p>
+    <section id="gallery" class="wrap">
+      <h2 class="section-title">Recent Work</h2>
+      <p class="section-sub">Quality craftsmanship on every project &mdash; from gate automation to ranch fences and equipment repairs.</p>
+      <div class="gallery" id="galleryGrid">
+        <div class="gallery-item"><img src="images/IMG_5227.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5232.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5226.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5230.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5058.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4913.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0397.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4797.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4302.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4141.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4138.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4137.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4022.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3815.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3728.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3727.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3726.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3676.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3628.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3336.jpeg"    alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3285.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_2646.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4955_web.jpg" alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3764_web.jpg" alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0395.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0393.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0391.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0392.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0377.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4951.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_6160.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_1513.jpeg"    alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4258.PNG"     alt="Welding Project" loading="lazy"></div>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Custom Entryways</h4>
-        <p>Steel entryways, ranch entrances, columns, gate frames, pipe work, and full entrance builds.</p>
+    <section id="services" class="wrap">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">Built for ranch, farm, residential, commercial, and repair work.</p>
+      <div class="cards">
+        <div class="service featured">
+          <span class="service-badge">&#9733; Specialty</span>
+          <h3>Automated Gate Openers</h3>
+          <p>Install, diagnose, repair, and program automatic swing and slide gate opener systems. New installs and all major brands serviced.</p>
+        </div>
+        <div class="service featured">
+          <span class="service-badge">&#9733; Specialty</span>
+          <h3>Custom Gates &amp; Entryways</h3>
+          <p>Fabrication and installation of custom ranch entry gates, pipe gates, ornamental gates, and automated entry systems.</p>
+        </div>
+        <div class="service"><h3>Fence &amp; Gate Welding</h3><p>Pipe fence, H-braces, post replacement, custom gates, gate repairs, and entryway work.</p></div>
+        <div class="service"><h3>Cattle Guards &amp; Ranch Entrances</h3><p>Fabrication, installation, repair, and custom ranch entry layouts.</p></div>
+        <div class="service"><h3>Trailer Repair</h3><p>Couplers, tongues, ramps, dovetails, spring hangers, stake pockets, cracks, and reinforcements.</p></div>
+        <div class="service"><h3>Equipment Repair</h3><p>Farm equipment, light/heavy equipment, buckets, brackets, mounts, and field repairs.</p></div>
+        <div class="service"><h3>Custom Fabrication</h3><p>Handrails, stairs, brackets, repairs, modifications, and one-off steel projects.</p></div>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Automated Gate Openers</h4>
-        <p>Gate opener installs, troubleshooting, solar setups, keypads, remotes, exit sensors, and repairs.</p>
+    <section class="wrap">
+      <div class="split">
+        <div class="card">
+          <h2 class="section-title">Why call K~Welding LLC?</h2>
+          <ul class="list">
+            <li>Gate automation specialist &mdash; installs &amp; repairs.</li>
+            <li>Mobile rig comes to your job site.</li>
+            <li>Farm, ranch, fence, gate, trailer, and equipment experience.</li>
+            <li>Clear estimates and direct communication.</li>
+            <li>Central Texas service area with travel available.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Best jobs to call for</h2>
+          <ul class="list">
+            <li>Automated gate opener installs and troubleshooting.</li>
+            <li>Gate opener not working &mdash; any brand.</li>
+            <li>Broken gates, sagging gates, or damaged hinges.</li>
+            <li>Pipe fence repair or new fence sections.</li>
+            <li>Cattle guard installs and repairs.</li>
+            <li>Trailer and equipment cracks, breaks, and modifications.</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Equipment & Trailer Repair</h4>
-        <p>Farm equipment, trailers, brackets, cracks, ramps, couplers, hinges, and general mobile repair work.</p>
+    <section id="area" class="wrap">
+      <h2 class="section-title">Service Area</h2>
+      <p class="section-sub">Serving counties across Central Texas.</p>
+      <div class="counties">
+        <span class="pill">Burleson County</span>
+        <span class="pill">Brazos County</span>
+        <span class="pill">Washington County</span>
+        <span class="pill">Lee County</span>
+        <span class="pill">Robertson County</span>
+        <span class="pill">Milam County</span>
+        <span class="pill">Austin County</span>
+        <span class="pill">Grimes County</span>
+        <span class="pill">Waller County</span>
+        <span class="pill">Fayette County</span>
+        <span class="pill">Madison County</span>
+        <span class="pill">Walker County</span>
+        <span class="pill">Williamson County</span>
+        <span class="pill">Bastrop County</span>
+        <span class="pill">Colorado County</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h3>Why Choose K~Welding LLC?</h3>
-
-    <div class="grid">
+    <section id="contact" class="wrap">
       <div class="card">
-        <h4>Mobile Service</h4>
-        <p>We come to your property, ranch, shop, jobsite, or field so you do not have to haul the work in.</p>
+        <h2 class="section-title">Get a welding estimate</h2>
+        <p class="section-sub">Send pictures, location, measurements, and what needs repaired or built.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+19792214089">Call/Text (979) 221-4089</a>
+          <a class="btn secondary" href="mailto:kolten@k-welding-llc.com?subject=Welding%20Estimate%20Request">kolten@k-welding-llc.com</a>
+        </div>
+        <p class="notice">Tip: Photos make estimates faster. Include wide shots, close-ups of the damaged area, and your county or town.</p>
       </div>
+    </section>
 
-      <div class="card">
-        <h4>Built Heavy</h4>
-        <p>Work is done with strength, function, and real-world use in mind — not just looks.</p>
-      </div>
-
-      <div class="card">
-        <h4>Ranch & Property Focused</h4>
-        <p>We understand gates, fence, cattle guards, equipment, and the kind of repairs that keep things moving.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h3>Service Area</h3>
-    <p class="intro">
-      Serving <span class="highlight">Central Texas</span> and surrounding counties.
-    </p>
-
-    <ul class="service-area">
-      <li>Burleson County</li>
-      <li>Brazos County</li>
-      <li>Washington County</li>
-      <li>Lee County</li>
-      <li>Robertson County</li>
-      <li>Milam County</li>
-      <li>Austin County</li>
-      <li>Grimes County</li>
-      <li>Waller County</li>
-      <li>Fayette County</li>
-      <li>Madison County</li>
-      <li>Walker County</li>
-      <li>Williamson County</li>
-      <li>Bastrop County</li>
-      <li>Colorado County</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Get a Quote</h3>
-
-    <div class="contact-box">
-      <p>Need mobile welding, gate repair, fence work, cattle guard work, or a custom steel project?</p>
-      <br />
-      <p><a href="tel:19792214089">(979) 221-4089</a></p>
-      <p><a href="mailto:kolten@k-welding-llc.com">kolten@k-welding-llc.com</a></p>
-      <br />
-      <p class="highlight">K~Welding LLC — Fabrication & Repairs</p>
-    </div>
-  </section>
+  </main>
 
   <footer>
-    <p>© 2026 K~Welding LLC. All rights reserved.</p>
-    <p>Mobile Welding • Fabrication • Fence • Gates • Cattle Guards • Automated Gate Openers</p>
+    <div class="wrap">
+      <img class="footer-logo" src="images/logo.png" alt="K~Welding LLC Logo">
+      <div class="footer-brand">K~Welding LLC</div>
+      <div>Fabrication &bull; Repairs &bull; Gate Automations &bull; Central Texas</div>
+      <div style="margin-top:20px;font-size:.8rem;opacity:.6;">&copy; 2026 K~Welding LLC. All rights reserved.</div>
+    </div>
   </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" id="lbClose">&times;</span>
+    <span class="lb-prev" id="lbPrev">&#8249;</span>
+    <img id="lbImg" src="" alt="Gallery Image">
+    <span class="lb-next" id="lbNext">&#8250;</span>
+  </div>
+
+  <script>
+    const items = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    let cur = 0;
+    function openLB(i)  { cur=i; lbImg.src=items[i].src; lb.classList.add('active'); }
+    function closeLB()  { lb.classList.remove('active'); }
+    function prevLB()   { cur=(cur-1+items.length)%items.length; lbImg.src=items[cur].src; }
+    function nextLB()   { cur=(cur+1)%items.length; lbImg.src=items[cur].src; }
+    items.forEach((img,i)=>img.parentElement.addEventListener('click',()=>openLB(i)));
+    document.getElementById('lbClose').addEventListener('click',closeLB);
+    document.getElementById('lbPrev').addEventListener('click',prevLB);
+    document.getElementById('lbNext').addEventListener('click',nextLB);
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+    document.addEventListener('keydown',e=>{
+      if(!lb.classList.contains('active'))return;
+      if(e.key==='Escape')closeLB();
+      if(e.key==='ArrowLeft')prevLB();
+      if(e.key==='ArrowRight')nextLB();
+    });
+  </script>
 
 </body>
 </html>

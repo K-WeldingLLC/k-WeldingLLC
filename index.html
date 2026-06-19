@@ -23,18 +23,20 @@
     a{color:inherit;text-decoration:none}
     .wrap{width:min(1120px,92vw);margin:auto}
 
+    /* Header */
     header{position:sticky;top:0;z-index:100;background:rgba(5,8,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em;font-size:1.3rem;color:var(--brand)}
     .brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0}
     .brand-text small{display:block;color:var(--muted);font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase}
-    .links{display:flex;gap:18px;align-items:center}
-    .links a{color:var(--muted);font-weight:700}
+    .links{display:flex;gap:16px;align-items:center}
+    .links a{color:var(--muted);font-weight:700;font-size:.9rem}
     .links a:hover{color:var(--brand2)}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#001114!important;font-weight:900;border-radius:999px;padding:12px 20px;box-shadow:0 8px 24px rgba(0,213,213,.22);transition:transform .2s}
     .btn:hover{transform:translateY(-2px)}
     .btn.secondary{background:transparent;color:var(--brand2)!important;border:2px solid var(--brand)}
 
+    /* Hero */
     .hero{padding:60px 0 40px}
     .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
     .badge{display:inline-block;border:1px solid rgba(0,213,213,.45);color:var(--brand2);border-radius:999px;padding:7px 14px;font-weight:800;background:rgba(0,213,213,.08);margin-bottom:6px}
@@ -47,6 +49,7 @@
     .quick p{margin:8px 0;color:var(--muted)}
     .phone{font-size:1.75rem;font-weight:900;color:var(--brand)}
 
+    /* Gate Automation Feature */
     .gate-feature{background:linear-gradient(135deg,rgba(0,80,90,.25) 0%,rgba(7,11,16,.9) 60%);border:1px solid rgba(0,213,213,.3);border-radius:24px;padding:40px}
     .gate-feature h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px;color:var(--brand2)}
     .gate-feature .sub{color:var(--muted);font-size:1.1rem;margin:0 0 28px}
@@ -57,6 +60,7 @@
     .gate-brands{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
     .brand-pill{background:rgba(0,213,213,.1);border:1px solid rgba(0,213,213,.25);border-radius:999px;padding:5px 14px;font-size:.85rem;color:var(--brand2);font-weight:700}
 
+    /* Sections */
     section{padding:50px 0}
     .section-title{font-size:2.5rem;margin:0 0 8px;color:var(--brand2)}
     .section-sub{color:var(--muted);margin:0 0 30px;font-size:1.1rem}
@@ -69,20 +73,33 @@
     .service.featured h3{font-size:1.2rem}
     .service-badge{display:inline-block;background:var(--brand);color:#001114;font-size:.7rem;font-weight:900;border-radius:999px;padding:3px 10px;margin-bottom:8px;letter-spacing:.05em;text-transform:uppercase}
 
-    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px;margin-top:20px}
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:20px}
     .gallery-item{aspect-ratio:1/1;overflow:hidden;border-radius:12px;border:1px solid var(--line);cursor:pointer;position:relative}
     .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
     .gallery-item:hover img{transform:scale(1.08)}
 
+    /* Video Section */
+    .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:20px}
+    .video-item{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:rgba(16,24,32,.75);cursor:pointer;position:relative}
+    .video-item video{width:100%;display:block;max-height:260px;object-fit:cover;background:#000}
+    .video-item .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);transition:background .3s;pointer-events:none}
+    .video-item:hover .play-overlay{background:rgba(0,0,0,.15)}
+    .play-btn{width:56px;height:56px;border-radius:50%;background:rgba(0,213,213,.85);display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(0,213,213,.4)}
+    .play-btn svg{fill:#001114;width:22px;height:22px;margin-left:4px}
+    .video-item.playing .play-overlay{display:none}
+
+    /* Lightbox */
     .lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);align-items:center;justify-content:center}
     .lightbox.active{display:flex}
     .lightbox img{max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 0 60px rgba(0,213,213,.25)}
-    .lb-close{position:fixed;top:18px;right:26px;font-size:2.6rem;color:#fff;cursor:pointer;line-height:1;opacity:.8}
+    .lb-close{position:fixed;top:18px;right:26px;font-size:2.6rem;color:#fff;cursor:pointer;line-height:1;opacity:.8;z-index:1000}
     .lb-close:hover{opacity:1;color:var(--brand)}
-    .lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);font-size:2.5rem;color:#fff;cursor:pointer;opacity:.7;padding:10px 18px;background:rgba(0,0,0,.45);border-radius:8px;user-select:none}
+    .lb-prev,.lb-next{position:fixed;top:50%;transform:translateY(-50%);font-size:2.5rem;color:#fff;cursor:pointer;opacity:.7;padding:10px 18px;background:rgba(0,0,0,.45);border-radius:8px;user-select:none;z-index:1000}
     .lb-prev:hover,.lb-next:hover{opacity:1;color:var(--brand)}
     .lb-prev{left:10px} .lb-next{right:10px}
 
+    /* Misc */
     .counties{display:flex;flex-wrap:wrap;gap:9px}
     .pill{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 12px;color:#d8e6e8;font-weight:700}
     .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -109,6 +126,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="wrap nav">
       <a class="brand" href="/">
@@ -119,6 +137,7 @@
         <a href="#gate-automation">Gate Automation</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
+        <a href="#videos">Videos</a>
         <a href="#area">Service Area</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -128,6 +147,7 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero wrap">
       <div class="grid">
         <div>
@@ -149,6 +169,7 @@
       </div>
     </section>
 
+    <!-- GATE AUTOMATION FEATURE -->
     <section id="gate-automation" class="wrap">
       <div class="gate-feature">
         <h2>Automated Gate Openers</h2>
@@ -193,17 +214,22 @@
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section id="gallery" class="wrap">
       <h2 class="section-title">Recent Work</h2>
       <p class="section-sub">Quality craftsmanship on every project &mdash; from gate automation to ranch fences and equipment repairs.</p>
       <div class="gallery" id="galleryGrid">
+        <div class="gallery-item"><img src="images/IMG_5474.jpeg"    alt="Gate automation control board repair" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5385.JPG"     alt="LiftMaster gate opener install" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_5227.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_5232.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_5226.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_5230.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_5058.JPG"     alt="Welding Project" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/IMG_4913.PNG"     alt="Welding Project" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/IMG_0397.JPG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5840.PNG"     alt="Welding fabrication shop" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5829.PNG"     alt="Welding fabrication shop" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_5831.PNG"     alt="Welding fabrication shop" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_4913.PNG"     alt="Mobile welding on site" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_4797.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_4302.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_4141.PNG"     alt="Welding Project" loading="lazy"></div>
@@ -218,9 +244,13 @@
         <div class="gallery-item"><img src="images/IMG_3628.PNG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_3336.jpeg"    alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_3285.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_3125.PNG"     alt="K~Welding LLC mobile rig" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_2646.PNG"     alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/20260528181930_97890671.jpeg" alt="K~Welding LLC welding" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_6112.JPG"     alt="K~Welding LLC work truck" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_4955_web.jpg" alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_3764_web.jpg" alt="Welding Project" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/IMG_0397.JPG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_0395.JPG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_0393.JPG"     alt="Welding Project" loading="lazy"></div>
         <div class="gallery-item"><img src="images/IMG_0391.JPG"     alt="Welding Project" loading="lazy"></div>
@@ -233,6 +263,75 @@
       </div>
     </section>
 
+    <!-- VIDEOS -->
+    <section id="videos" class="wrap">
+      <h2 class="section-title">Watch Us Work</h2>
+      <p class="section-sub">See K~Welding LLC in action &mdash; gate automation, fabrication, and field repairs.</p>
+      <div class="video-grid">
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/RenderedVideo.jpg" playsinline>
+            <source src="videos/RenderedVideo.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/v15044gf0000d7c05q7og65iqruip6jg.jpg" playsinline>
+            <source src="videos/v15044gf0000d7c05q7og65iqruip6jg.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/66ECAADE-E90D-44DD-B6CB-60FB2E64B9D3.jpg" playsinline>
+            <source src="videos/66ECAADE-E90D-44DD-B6CB-60FB2E64B9D3.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/815BD9BC-4498-4AB3-BA33-3B4F85DA6394.jpg" playsinline>
+            <source src="videos/815BD9BC-4498-4AB3-BA33-3B4F85DA6394.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/C5238ACA-3A7B-44D8-A174-D477B4C742FD.jpg" playsinline>
+            <source src="videos/C5238ACA-3A7B-44D8-A174-D477B4C742FD.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/F2BD4579-6E85-442D-9478-DD4B91A7B09F.jpg" playsinline>
+            <source src="videos/F2BD4579-6E85-442D-9478-DD4B91A7B09F.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/DF48C22F-E901-466D-942F-ECE1961FC4F5.jpg" playsinline>
+            <source src="videos/DF48C22F-E901-466D-942F-ECE1961FC4F5.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/077C8BF1-F1DE-4713-93C2-6E5B8399BAFB.jpg" playsinline>
+            <source src="videos/077C8BF1-F1DE-4713-93C2-6E5B8399BAFB.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/IMG_2156.jpg" playsinline>
+            <source src="videos/IMG_2156.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="video-item" onclick="playVideo(this)">
+          <video preload="none" poster="images/thumbs/IMG_2678.jpg" playsinline>
+            <source src="videos/IMG_2678.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
     <section id="services" class="wrap">
       <h2 class="section-title">Services</h2>
       <p class="section-sub">Built for ranch, farm, residential, commercial, and repair work.</p>
@@ -255,6 +354,7 @@
       </div>
     </section>
 
+    <!-- WHY / BEST JOBS -->
     <section class="wrap">
       <div class="split">
         <div class="card">
@@ -281,6 +381,7 @@
       </div>
     </section>
 
+    <!-- SERVICE AREA -->
     <section id="area" class="wrap">
       <h2 class="section-title">Service Area</h2>
       <p class="section-sub">Serving counties across Central Texas.</p>
@@ -303,6 +404,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="wrap">
       <div class="card">
         <h2 class="section-title">Get a welding estimate</h2>
@@ -317,6 +419,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <img class="footer-logo" src="images/logo.png" alt="K~Welding LLC Logo">
@@ -326,6 +429,7 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <span class="lb-close" id="lbClose">&times;</span>
     <span class="lb-prev" id="lbPrev">&#8249;</span>
@@ -334,6 +438,7 @@
   </div>
 
   <script>
+    // Gallery lightbox
     const items = Array.from(document.querySelectorAll('.gallery-item img'));
     const lb    = document.getElementById('lightbox');
     const lbImg = document.getElementById('lbImg');
@@ -353,6 +458,22 @@
       if(e.key==='ArrowLeft')prevLB();
       if(e.key==='ArrowRight')nextLB();
     });
+
+    // Video play
+    function playVideo(item) {
+      const vid = item.querySelector('video');
+      if (vid.paused) {
+        // Pause all other videos
+        document.querySelectorAll('.video-item video').forEach(v => {
+          if (v !== vid) { v.pause(); v.closest('.video-item').classList.remove('playing'); }
+        });
+        vid.play();
+        item.classList.add('playing');
+      } else {
+        vid.pause();
+        item.classList.remove('playing');
+      }
+    }
   </script>
 
 </body>

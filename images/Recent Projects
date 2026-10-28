@@ -1,0 +1,119 @@
+‹
+<style>
+.k-welding-slider-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 45px;
+}
+.k-welding-slider {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.k-welding-slider::-webkit-scrollbar {
+  display: none;
+}
+.k-welding-slider img {
+  width: 340px;
+  height: 260px;
+  flex: 0 0 340px;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: start;
+}
+.k-welding-slider-nav {
+  position: absolute;
+  top: 42%;
+  background: #101820;
+  color: #79ffff;
+  border: 1px solid #00d5d5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.k-welding-slider-nav.prev { left: 0; }
+.k-welding-slider-nav.next { right: 0; }
+@media(max-width: 620px) {
+  .k-welding-slider-wrap { padding: 0 36px; }
+  .k-welding-slider img {
+    width: 75vw;
+    flex-basis: 75vw;
+    height: 210px;
+  }
+}
+@media(prefers-reduced-motion: reduce) {
+  .k-welding-slider { scroll-behavior: auto; }
+}
+</style>
+
+<div class="k-welding-slider-wrap">
+<button class="k-welding-slider-nav prev" type="button" aria-label="Previous photos">&#8249;</button>
+
+<div class="k-welding-slider">
+<img src="/images/k-welding-automated-gate-circuit-board-repair.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-automated-gate-opener-diagnostics-central-tx.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-cattle-guard-layout-fabrication-detail.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-concrete-culvert-driveway-fence.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-H-star-automated-slide-gate.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-bollards-pipe-bellville-tx.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-cattle-guard-pipe-frame-trailer.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-ranch-entry-4-rail-fence.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-ranch-entry-overhead-gate-stone-pillars.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-ranch-gate-pipe-fence-install.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-double-pipe-overhead-ranch-gate-entry.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-field-equipment-weld-repair-bellville.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-field-weld-closeup-mobile-service.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-hoa-automated-slide-gate-detail.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-hoa-slide-gate-estates-creek-stone-pillars.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-mobile-welding-rig-shop-interior.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-nice-apollo-gate-opener-board-cb10.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-shop-fabrication-ranch-gate-frames.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-shou-sugi-ban-wood-finish-ranch-gate.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-steel-pipe-wood-privacy-fence-bellville.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-wood-steel-privacy-fence-deck-project.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-industrial-ant-space-piping-shop-fab.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-tree-support-bracket-fab-on-truck.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-tree-support-jack-stands-fab.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-custom-live-oak-tree-prop-fab.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-live-oak-tree-brace-backyard-install.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-firepit-live-oak-tree-brace-final-install.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-precision-digital-level-0-deg.jpg" alt="" onerror="this.remove()">
+<img src="/images/k-welding-tig-weld-stack-detail.jpg" alt="" onerror="this.remove()">
+</div>
+
+<button class="k-welding-slider-nav next" type="button" aria-label="Next photos">&#8250;</button>
+</div>
+
+<script>
+(() => {
+  const wrap = document.querySelector('.k-welding-slider-wrap');
+  const track = wrap.querySelector('.k-welding-slider');
+
+  function move(dir) {
+    const img = track.querySelector('img');
+    if (!img) return;
+    const step = img.getBoundingClientRect().width + 14;
+    const max = track.scrollWidth - track.clientWidth;
+    let dest = track.scrollLeft + dir * step;
+    if (dest > max - 5) dest = 0;
+    if (dest < 0) dest = max;
+    track.scrollTo({left: dest, behavior: 'smooth'});
+  }
+
+  wrap.querySelector('.prev').addEventListener('click', () => move(-1));
+  wrap.querySelector('.next').addEventListener('click', () => move(1));
+
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const interval = setInterval(() => move(1), 5000);
+    const pause = () => clearInterval(interval);
+    wrap.addEventListener('mouseenter', pause, {once:true});
+    wrap.addEventListener('pointerdown', pause, {once:true});
+    wrap.addEventListener('focusin', pause, {once:true});
+  }
+})();
+</script>

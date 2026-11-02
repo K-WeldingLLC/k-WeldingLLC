@@ -1,1 +1,1 @@
-/*    /index.html   200
+# Serve existing static pages directly; do not rewrite every URL to index.html.
